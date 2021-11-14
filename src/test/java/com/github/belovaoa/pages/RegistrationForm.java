@@ -1,6 +1,7 @@
 package com.github.belovaoa.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.github.belovaoa.pages.compoents.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -16,6 +17,7 @@ public class RegistrationForm {
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             resultsTable = $(".table-responsive");
+    public CalendarComponent calendar = new CalendarComponent();
 
     // actions
     public void openPage() {

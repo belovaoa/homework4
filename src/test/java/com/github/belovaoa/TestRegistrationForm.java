@@ -16,15 +16,11 @@ public class TestRegistrationForm extends TestBase {
         registrationForm.inputFirstName("Name1")
                         .inputLastName("Last1");
 
-        $("#lastName").setValue("Last1");
         $("#userEmail").setValue("last1@ya.ru");
         $("#genterWrapper").$(byText("Female")).click();
         $("#userNumber").setValue("7991977777");
 
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOptionByValue("5");
-        $(".react-datepicker__year-select").selectOptionByValue("2000");
-        $(".react-datepicker__day--010:not(.react-datepicker__day--outside-month)").click();
+        registrationForm.calendar.setDate("10", "5", "2000");
 
         $("#subjectsInput").setValue("Physics").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
