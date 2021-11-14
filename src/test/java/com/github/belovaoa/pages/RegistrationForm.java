@@ -7,6 +7,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.github.belovaoa.pages.compoents.TestData.lastName;
+import static com.github.belovaoa.pages.compoents.TestData.nameStudent;
 
 public class RegistrationForm {
 
@@ -35,13 +37,13 @@ public class RegistrationForm {
         formTitle.shouldHave(text(FORM_TITLE));
     }
 
-    public RegistrationForm inputFirstName(String value) {
-        firstNameInput.setValue(value);
+    public RegistrationForm inputFirstName() {
+        firstNameInput.setValue(nameStudent);
         return this;
     }
 
-    public RegistrationForm inputLastName(String value) {
-        lastNameInput.setValue(value);
+    public RegistrationForm inputLastName() {
+        lastNameInput.setValue(lastName);
         return this;
     }
 
@@ -55,8 +57,8 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm inputMobileNumber(String phone) {
-        mobileNumberInput.setValue(phone);
+    public RegistrationForm inputMobileNumber(String number) {
+        mobileNumberInput.setValue(number);
         return this;
     }
 

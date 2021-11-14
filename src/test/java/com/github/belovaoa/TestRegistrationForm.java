@@ -2,14 +2,19 @@ package com.github.belovaoa;
 
 import org.junit.jupiter.api.Test;
 
-public class TestRegistrationForm extends TestBase {
+import static com.github.belovaoa.pages.compoents.TestData.lastName;
+import static com.github.belovaoa.pages.compoents.TestData.nameStudent;
+
+public class TestRegistrationForm extends TestBase{
+
 
     @Test
     void fillFormTest() {
 
+
         registrationForm.openPage();
-        registrationForm.inputFirstName("Name1")
-                        .inputLastName("Last1")
+        registrationForm.inputFirstName()
+                        .inputLastName()
                         .inputEmail("last1@ya.ru")
                         .chooseGender("Female")
                         .inputMobileNumber("7991977777")
@@ -23,7 +28,7 @@ public class TestRegistrationForm extends TestBase {
         registrationForm.submit();
 
         registrationForm.verificationPopupName("Thanks for submitting the form");
-        registrationForm.checkResultsValue("Student Name", "Name1 Last1")
+        registrationForm.checkResultsValue("Student Name", nameStudent + " " + lastName)
                         .checkResultsValue("Student Email", "last1@ya.ru")
                         .checkResultsValue("Gender", "Female")
                         .checkResultsValue("Mobile", "7991977777")
@@ -33,5 +38,6 @@ public class TestRegistrationForm extends TestBase {
                         .checkResultsValue("Picture", "imade.jpg")
                         .checkResultsValue("Address", "1Street 11")
                         .checkResultsValue("State and City", "NCR Delhi");
+
     }
 }
