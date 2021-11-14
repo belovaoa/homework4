@@ -3,6 +3,7 @@ package com.github.belovaoa.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -13,7 +14,8 @@ public class RegistrationForm {
     private SelenideElement
             formTitle = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
-            lastNameInput = $("#lastName");
+            lastNameInput = $("#lastName"),
+            resultsTable = $(".table-responsive");
 
     // actions
     public void openPage() {
@@ -21,13 +23,17 @@ public class RegistrationForm {
         formTitle.shouldHave(text(FORM_TITLE));
     }
 
-    public void inputFirstName(String value) {
+    public RegistrationForm inputFirstName(String value) {
         firstNameInput.setValue(value);
+        return this;
     }
 
     public void inputLastName(String value) {
         lastNameInput.setValue(value);
     }
 
-
+    public RegistrationForm checkResultsValue(String key, String value) {
+        resultsTable.$(byText(key)).parent().shouldHave(text(value));
+        return this;
+    }
 }

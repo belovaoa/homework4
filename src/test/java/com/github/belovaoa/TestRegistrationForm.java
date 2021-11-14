@@ -12,8 +12,10 @@ public class TestRegistrationForm extends TestBase {
     void fillFormTest() {
 
         registrationForm.openPage();
-        registrationForm.inputFirstName("Name1");
-        registrationForm.inputLastName("Last1");
+
+        registrationForm.inputFirstName("Name1")
+                        .inputLastName("Last1");
+
         $("#lastName").setValue("Last1");
         $("#userEmail").setValue("last1@ya.ru");
         $("#genterWrapper").$(byText("Female")).click();
@@ -44,7 +46,8 @@ public class TestRegistrationForm extends TestBase {
                 text("last1@ya.ru"), text("Female"), text("7991977777"),
                 text("10 June,2000"), text("Physics"), text("Sports"),
                 text("imade.jpg"), text("1Street 11"), text("NCR Delhi"));
-
+        registrationForm.checkResultsValue("Student Name", "Name1 Last1")
+                        .checkResultsValue("Email", "last1@ya.ru");
 
     }
 }
