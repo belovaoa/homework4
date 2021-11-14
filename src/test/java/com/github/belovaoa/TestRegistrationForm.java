@@ -27,7 +27,7 @@ public class TestRegistrationForm extends TestBase {
                         .checkResultsValue("Student Email", "last1@ya.ru")
                         .checkResultsValue("Gender", "Female")
                         .checkResultsValue("Mobile", "7991977777")
-                        .checkResultsValue("Date of Birth", "10 July,2000")
+                        .checkResultsValue("Date of Birth", "10 June,2000")
                         .checkResultsValue("Subjects", "Physics")
                         .checkResultsValue("Hobbies", "Sports")
                         .checkResultsValue("Picture", "imade.jpg")
