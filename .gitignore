@@ -10,6 +10,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Properties files
+*.properties
+
 # Package Files #
 *.jar
 *.war
@@ -40,9 +43,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
 
