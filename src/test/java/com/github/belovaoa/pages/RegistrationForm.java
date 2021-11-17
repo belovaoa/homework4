@@ -71,8 +71,8 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm inputAddress(String address) {
-        addressInput.setValue(address);
+    public RegistrationForm inputAddress() {
+        addressInput.setValue(addressStudent);
         return this;
     }
 

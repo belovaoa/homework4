@@ -19,7 +19,7 @@ public class TestRegistrationForm extends TestBase{
                         .inputMobileNumber()
                         .inputSubjects("Physics")
                         .chooseHobby("Sports")
-                        .inputAddress("1Street 11")
+                        .inputAddress()
                         .uploadFile("img/imade.jpg")
                         .inputState("NCR")
                         .inputCity("Delhi");
@@ -35,7 +35,7 @@ public class TestRegistrationForm extends TestBase{
                         .checkResultsValue("Subjects", "Physics")
                         .checkResultsValue("Hobbies", "Sports")
                         .checkResultsValue("Picture", "imade.jpg")
-                        .checkResultsValue("Address", "1Street 11")
+                        .checkResultsValue("Address", addressStudent)
                         .checkResultsValue("State and City", "NCR Delhi");
 
     }

@@ -12,5 +12,6 @@ public class TestData {
             nameStudent = faker.name().firstName(),
             lastName = faker.name().lastName(),
             phoneNumber = faker.numerify("##########"),
-            emailStudent = faker.internet().emailAddress();
+            emailStudent = faker.internet().emailAddress(),
+            addressStudent = faker.address().streetAddress();
 }
