@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.github.belovaoa.pages.compoents.TestData.lastName;
-import static com.github.belovaoa.pages.compoents.TestData.nameStudent;
+import static com.github.belovaoa.pages.compoents.TestData.*;
 
 public class RegistrationForm {
 
@@ -47,8 +46,8 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm inputEmail(String email) {
-        emailInput.setValue(email);
+    public RegistrationForm inputEmail() {
+        emailInput.setValue(emailStudent);
         return this;
     }
 
@@ -57,8 +56,8 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm inputMobileNumber(String number) {
-        mobileNumberInput.setValue(number);
+    public RegistrationForm inputMobileNumber() {
+        mobileNumberInput.setValue(phoneNumber);
         return this;
     }
 

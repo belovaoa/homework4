@@ -10,6 +10,7 @@ public class TestData {
 
     public static String
             nameStudent = faker.name().firstName(),
-            lastName = faker.name().lastName();
-
+            lastName = faker.name().lastName(),
+            phoneNumber = faker.numerify("##########"),
+            emailStudent = faker.internet().emailAddress();
 }
