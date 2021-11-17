@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.github.belovaoa.pages.compoents.TestData.*;
+import static com.github.belovaoa.pages.TestData.*;
 
 public class RegistrationForm {
 

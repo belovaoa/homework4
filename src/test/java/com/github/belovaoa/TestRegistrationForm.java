@@ -2,7 +2,7 @@ package com.github.belovaoa;
 
 import org.junit.jupiter.api.Test;
 
-import static com.github.belovaoa.pages.compoents.TestData.*;
+import static com.github.belovaoa.pages.TestData.*;
 
 public class TestRegistrationForm extends TestBase{
 

@@ -1,4 +1,4 @@
-package com.github.belovaoa.pages.compoents;
+package com.github.belovaoa.pages;
 
 import com.github.javafaker.Faker;
 
