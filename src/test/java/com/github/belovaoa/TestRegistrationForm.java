@@ -10,7 +10,6 @@ public class TestRegistrationForm extends TestBase{
     @Test
     void fillFormTest() {
 
-
         registrationForm.openPage();
         registrationForm.inputFirstName()
                         .inputLastName()
@@ -20,10 +19,10 @@ public class TestRegistrationForm extends TestBase{
                         .inputSubjects("Physics")
                         .chooseHobby("Sports")
                         .inputAddress()
-                        .uploadFile("img/imade.jpg")
+                        .uploadFile("img/image.jpg")
                         .inputState("NCR")
                         .inputCity("Delhi");
-        registrationForm.calendar.setDate("10", "5", "2000");
+        registrationForm.calendar.setDate("10", "5", "2001");
         registrationForm.submit();
 
         registrationForm.verificationPopupName("Thanks for submitting the form");
@@ -31,12 +30,11 @@ public class TestRegistrationForm extends TestBase{
                         .checkResultsValue("Student Email", emailStudent)
                         .checkResultsValue("Gender", "Female")
                         .checkResultsValue("Mobile", phoneNumber)
-                        .checkResultsValue("Date of Birth", "10 June,2000")
+                        .checkResultsValue("Date of Birth", "10 June,2001")
                         .checkResultsValue("Subjects", "Physics")
                         .checkResultsValue("Hobbies", "Sports")
-                        .checkResultsValue("Picture", "imade.jpg")
+                        .checkResultsValue("Picture", "image.jpg")
                         .checkResultsValue("Address", addressStudent)
                         .checkResultsValue("State and City", "NCR Delhi");
-
     }
 }
