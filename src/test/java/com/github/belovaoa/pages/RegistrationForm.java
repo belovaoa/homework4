@@ -104,6 +104,4 @@ public class RegistrationForm {
         resultsTable.$(byText(key)).parent().shouldHave(text(value));
         return this;
     }
-
-
 }
